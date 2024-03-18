@@ -252,7 +252,7 @@ bool operator<=(const GFelement& left, const GFelement& right)
 {
    if (left.field != right.field) throw ErrorIncompatibleFields;
 
-   return ((left==right) | (left<right)) ? true : false;
+   return ((left==right) || (left<right)) ? true : false;
 }
 
 
@@ -262,7 +262,7 @@ bool operator>=(const GFelement& left, const GFelement& right)
 {
    if (left.field != right.field) throw ErrorIncompatibleFields;
 
-   return ((left==right) | (left>right)) ? true : false;
+   return ((left==right) || (left>right)) ? true : false;
 }
 
 
