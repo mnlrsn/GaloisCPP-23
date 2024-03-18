@@ -14,9 +14,9 @@
 
 # GNU Makefile to build the "test_gfelement" executable
 
-CC     = g++
-CFLAGS = -pedantic -ansi -Wall -O3 -o
-LFLAGS = -pedantic -ansi -Wall -O3 -c
+CC     = clang++-18
+CFLAGS = -pedantic -ansi -Wall -Wextra  -Wno-c++11-long-long -O3 -o
+LFLAGS = -pedantic -ansi -Wall -Wextra  -Wno-c++11-long-long -O3 -c
 OBJS   = gfelement.o  galoisfield.o  polynomial_arith.o  modular_arith.o
 
 test_gfelement: test_gfelement.cpp $(OBJS)
